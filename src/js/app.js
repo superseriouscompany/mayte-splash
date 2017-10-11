@@ -1,5 +1,5 @@
 var $       = document.querySelector.bind(document)
-import api from './api'
+import api, {baseUrl} from './api'
 
 $('form').addEventListener('submit', submit)
 $('.js-instagram').addEventListener('click', instagramAuth)

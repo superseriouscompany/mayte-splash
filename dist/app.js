@@ -9096,7 +9096,7 @@ function showStep(step) {
 }
 
 function instagramAuth() {
-  var redirectUrl = baseUrl + '/webhooks/instagram';
+  var redirectUrl = _api.baseUrl + '/webhooks/instagram';
   var clientId = '1c6d8f10063b4ac7b9010194c380b6fb';
 
   var url = 'https://instagram.com/oauth/authorize/?client_id=' + clientId + '&redirect_uri=' + redirectUrl + '&response_type=code' + '&state=client.web';
@@ -9105,7 +9105,7 @@ function instagramAuth() {
 }
 
 function linkedinAuth() {
-  var redirectUrl = baseUrl + '/webhooks/linkedin';
+  var redirectUrl = _api.baseUrl + '/webhooks/linkedin';
   var clientId = '77jqckdp1kbvtl';
   var perms = ['r_basicprofile', 'r_emailaddress'];
 
