@@ -7,7 +7,6 @@ $('.js-linkedin').addEventListener('click', linkedinAuth)
 
 var accessToken;
 if( accessToken = qs('at') ) {
-  console.log('access token found', accessToken)
   if( qs('login') === 'li' ) {
     showStep('four')
   } else {
