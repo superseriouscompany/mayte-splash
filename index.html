@@ -3,11 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Mayte App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
   <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  Mayte
+  <h1>Mayte</h1>
+
+  <form onsubmit="return false">
+    <div class="step one">
+      <input type="text" class="js-promo" placeholder="Promo code"/>
+      <input type="submit" value="Enter" />
+    </div>
+
+    <div class="step two" style="display: none">
+      <h2>Save your spot with</h2>
+
+      <a class="js-instagram">Instagram</a>
+      <a class="js-linkedin">LinkedIN</a>
+    </div>
+
+    <div class="step three" style="display: none">
+      <input type="text" class="js-email" placeholder="E-mail Address"/>
+      <input type="submit" value="Save Spot" />
+    </div>
+  </form>
   <script src="app.js"></script>
 </body>
 </html>
