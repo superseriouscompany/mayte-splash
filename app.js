@@ -9034,8 +9034,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 "use strict";
 
 
+var _api = __webpack_require__(330);
+
+var _api2 = _interopRequireDefault(_api);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var $ = document.querySelector.bind(document);
-var baseUrl = window.location.href.match("mayteapp.com") ? 'https://api.mayte.com' : 'https://superserious.ngrok.io';
+
 
 $('form').addEventListener('submit', submit);
 $('.js-instagram').addEventListener('click', instagramAuth);
@@ -9067,26 +9073,11 @@ function submit(evt) {
       showError('Email is invalid');
     }
     var ok, statusCode;
-    return fetch(baseUrl + '/users/me', {
+    return (0, _api2.default)('/users/me', {
       method: 'PATCH',
-      body: JSON.stringify({ email: email }),
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Access-Token': accessToken
-      }
-    }).then(function (r) {
-      ok = r.ok;
-      statusCode = r.status;
-      debugger;
-      if (statusCode === 204) {
-        return true;
-      }
-      return r.json();
-    }).then(function (json) {
-      if (!ok) {
-        var errorMessage = json.message || json.error || JSON.stringify(json);
-        return showError(statusCode + ': ' + errorMessage);
-      }
+      body: { email: email },
+      accessToken: accessToken
+    }).then(function () {
       return showStep('four');
     }).catch(function (err) {
       console.error(err);
@@ -9143,6 +9134,61 @@ function qs(name) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 330 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = request;
+var baseUrl = exports.baseUrl = window.location.href.match("mayteapp.com") ? 'https://nwhj3zzqi6.execute-api.us-west-2.amazonaws.com/development' : 'https://superserious.ngrok.io';
+
+function request(path) {
+  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+  if (path[0] != '/') path = '/' + path;
+
+  options.headers = options.headers || {};
+  options.headers['Content-Type'] = 'application/json';
+  if (options.accessToken) {
+    options.headers['X-Access-Token'] = options.accessToken;
+    delete options.accessToken;
+  }
+  if (options.body && typeof options.body !== 'string') {
+    options.body = JSON.stringify(options.body);
+  }
+
+  var ok, statusCode;
+  return fetch('' + baseUrl + path, options).then(function (response) {
+    ok = response.ok;
+    statusCode = response.status;
+    if (statusCode === 204) {
+      return true;
+    }
+    return response.json();
+  }).then(function (json) {
+    if (!ok) {
+      var err = new Error(json.message || json.error || JSON.stringify(json));
+      err.name = 'ApiError';
+      err.statusCode = statusCode;
+      throw err;
+    }
+    return json;
+  }).catch(function (err) {
+    if (err.name == 'ApiError') {
+      throw err;
+    }
+
+    console.log(err.message, err.name);
+    console.error(err);
+    throw new Error(statusCode);
+  });
+}
 
 /***/ })
 /******/ ]);
