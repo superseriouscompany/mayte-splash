@@ -11,7 +11,7 @@
   <h1>Mayte</h1>
 
   <form onsubmit="return false">
-    <div class="step one">
+    <div class="step one" style="display: block">
       <input type="text" class="js-promo" placeholder="Promo code"/>
       <input type="submit" value="Enter" />
     </div>
@@ -24,10 +24,15 @@
     </div>
 
     <div class="step three" style="display: none">
-      <input type="text" class="js-email" placeholder="E-mail Address"/>
+      <input type="email" class="js-email" placeholder="E-mail Address"/>
       <input type="submit" value="Save Spot" />
     </div>
+
+    <div class="step four" style="display: none">
+      <h2>You're in.</h2>
+    </div>
   </form>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
