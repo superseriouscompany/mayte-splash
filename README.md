@@ -5,7 +5,6 @@
 
 # Running
 
-    webpack --watch
     serve dist
 
 # Deploy to gh-pages
