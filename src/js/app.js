@@ -1,5 +1,5 @@
 var $       = document.querySelector.bind(document)
-var baseUrl = window.location.href.match("mayteapp.com") ? 'https://api.mayte.com' : 'https://superserious.ngrok.io'
+import api from './api'
 
 $('form').addEventListener('submit', submit)
 $('.js-instagram').addEventListener('click', instagramAuth)
@@ -26,25 +26,12 @@ function submit(evt) {
     var regex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
     var email = $('.js-email').value
     if( !email.match(regex) ) { showError('Email is invalid') }
-    var ok, statusCode;
-    return fetch(`${baseUrl}/users/me`, {
-      method:  'PATCH',
-      body:    JSON.stringify({email: email}),
-      headers: {
-        'Content-Type':   'application/json',
-        'X-Access-Token': accessToken,
-      },
-    }).then((r) => {
-      ok = r.ok
-      statusCode = r.status
-      debugger
-      if( statusCode === 204 ) { return true }
-      return r.json()
-    }).then((json) => {
-      if( !ok ) {
-        var errorMessage = json.message || json.error || JSON.stringify(json)
-        return showError(statusCode + ': ' + errorMessage)
-      }
+    var ok, statusCode
+    return api('/users/me', {
+      method:      'PATCH',
+      body:        {email: email},
+      accessToken: accessToken,
+    }).then(() => {
       return showStep('four')
     }).catch((err) => {
       console.error(err)
