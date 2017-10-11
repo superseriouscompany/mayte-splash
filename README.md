@@ -5,7 +5,7 @@
 
 # Running
 
-    serve dist
+    npm start
 
 # Deploy to gh-pages
 
