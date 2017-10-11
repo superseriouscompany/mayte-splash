@@ -9060,7 +9060,7 @@ if (accessToken = qs('at')) {
 function submit(evt) {
   if ($('.step.one').style.display === 'block') {
     if ($('.js-promo').value.toLowerCase() !== 'treats!') {
-      showError('The promo code is incorrect');
+      return showError('The promo code is incorrect');
     }
     return showStep('two');
   }
