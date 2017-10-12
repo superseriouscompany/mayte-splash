@@ -251,7 +251,7 @@ main {
         width: 30px;
         height: 30px; }
     main form.signup .error {
-      top: calc(100% + 0.66em);
+      top: calc(100% - 20px);
       left: 50%;
       -webkit-transform: translate(-50%, 0);
               transform: translate(-50%, 0);
