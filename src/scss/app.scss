@@ -1,6 +1,12 @@
 @import './global';
 @import './color';
 
+$logo-height: 80px;
+
+html, body {
+  height: 100%;
+}
+
 body {
   background: white;
   color: $color-black;
@@ -20,12 +26,6 @@ p, h1, h2, h3, h4, h5 {
 a {
   cursor: pointer;
   color: cornflowerblue;
-}
-
-.logo {
-  max-width: 100px;
-  max-height: 100px;
-  bottom: 0; left: 0;
 }
 
 .bg {
@@ -84,6 +84,7 @@ main {
         margin-right: 0.5em;
         outline: none;
         font-size: 1em;
+        border-radius: 0;
       }
 
       .submitter {
@@ -149,10 +150,55 @@ main {
       left: 50%;
       transform: translate(-50%, 0);
       letter-spacing: 0.05em;
+      width: 90%;
     }
+  }
+
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+
+  .logo {
+    max-width: 100px;
+    max-height: 100px;
+    bottom: 0; left: 0;
   }
 
   .release {
     letter-spacing: 0.1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    padding: 5% 5% $logo-height;
+    display: block;
+    min-height: 500px;
+    height: 100%;
+
+    .definition {
+      font-size: 8vw;
+    }
+    .tag {
+      font-size: 4vw;
+    }
+
+  }
+  footer {
+    text-align: left;
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    display: flex;
+
+    .logo {
+      position: relative!important;
+      vertical-align: middle;
+    }
+    .release {
+      flex: 1;
+    }
   }
 }

@@ -126,6 +126,9 @@
       -ms-user-select: none;
           user-select: none; }
 
+html, body {
+  height: 100%; }
+
 body {
   background: white;
   color: #231f20;
@@ -144,12 +147,6 @@ p, h1, h2, h3, h4, h5 {
 a {
   cursor: pointer;
   color: cornflowerblue; }
-
-.logo {
-  max-width: 100px;
-  max-height: 100px;
-  bottom: 0;
-  left: 0; }
 
 .bg {
   top: 0;
@@ -203,7 +200,8 @@ main {
       padding-bottom: 0.25em;
       margin-right: 0.5em;
       outline: none;
-      font-size: 1em; }
+      font-size: 1em;
+      border-radius: 0; }
     main form.signup .step.one .submitter, main form.signup .step.three .submitter {
       border: 3px solid #231f20;
       border-radius: 3px;
@@ -244,6 +242,43 @@ main {
       left: 50%;
       -webkit-transform: translate(-50%, 0);
               transform: translate(-50%, 0);
-      letter-spacing: 0.05em; }
-  main .release {
+      letter-spacing: 0.05em;
+      width: 90%; }
+
+footer {
+  text-align: center;
+  width: 100%; }
+  footer .logo {
+    max-width: 100px;
+    max-height: 100px;
+    bottom: 0;
+    left: 0; }
+  footer .release {
     letter-spacing: 0.1em; }
+
+@media screen and (max-width: 480px) {
+  main {
+    padding: 5% 5% 80px;
+    display: block;
+    min-height: 500px;
+    height: 100%; }
+    main .definition {
+      font-size: 8vw; }
+    main .tag {
+      font-size: 4vw; }
+  footer {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    footer .logo {
+      position: relative !important;
+      vertical-align: middle; }
+    footer .release {
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; } }
