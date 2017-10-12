@@ -127,7 +127,12 @@
           user-select: none; }
 
 body {
-  background: white; }
+  background: white;
+  color: #231f20; }
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-weight: 300; }
 
 a {
   cursor: pointer;
@@ -136,7 +141,7 @@ a {
 .logo {
   max-width: 100px;
   max-height: 100px;
-  top: 0;
+  bottom: 0;
   left: 0; }
 
 .bg {
@@ -156,3 +161,6 @@ a {
     min-width: 100vw;
     -webkit-filter: blur(4px);
             filter: blur(4px); }
+
+main .definition {
+  font-weight: 200; }
