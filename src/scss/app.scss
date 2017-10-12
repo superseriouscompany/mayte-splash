@@ -73,13 +73,53 @@ main {
         background: none;
         border: none;
         color: black;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid $color-black;
         letter-spacing: 0.1em;
         padding-bottom: 0.25em;
         margin-right: 0.5em;
         outline: none;
         font-size: 1em;
+
+        &::selection {
+          background: $color-black;
+          color: white;
+        }
       }
+
+      .submitter {
+        border: 3px solid $color-black;
+        border-radius: 3px;
+
+        input[type="submit"] {
+          background: none;
+          border: none;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+        }
+
+        svg {
+          width: 2em;
+          height: 2em;
+
+          * {
+            stroke: $color-black;
+            fill: $color-black;
+          }
+        }
+
+        &:hover {
+          background-color: $color-black;
+          color: white;
+
+          svg {
+            * {
+              stroke: white;
+              fill: white;
+            }
+          }
+        }
+      }
+
     }
 
     .step.two {
