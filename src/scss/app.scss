@@ -5,6 +5,11 @@ body {
   background: white;
   color: $color-black;
   font-family: helvetica;
+
+  *::selection {
+    background: $color-black;
+    color: white;
+  }
 }
 
 p, h1, h2, h3, h4, h5 {
@@ -33,13 +38,13 @@ a {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.9);
   }
 
   video {
     min-height: 100vh;
     min-width: 100vw;
-    filter: blur(4px);
+    filter: blur(2px);
     // display: none;
   }
 }
@@ -68,8 +73,8 @@ main {
   form.signup {
     margin-bottom: 60px;
 
-    .step.one {
-      input[type="text"] {
+    .step.one, .step.three {
+      input[type="text"], input[type="email"] {
         background: none;
         border: none;
         color: black;
@@ -79,16 +84,13 @@ main {
         margin-right: 0.5em;
         outline: none;
         font-size: 1em;
-
-        &::selection {
-          background: $color-black;
-          color: white;
-        }
       }
 
       .submitter {
         border: 3px solid $color-black;
         border-radius: 3px;
+        width: 2em;
+        height: 2em;
 
         input[type="submit"] {
           background: none;
@@ -98,8 +100,8 @@ main {
         }
 
         svg {
-          width: 2em;
-          height: 2em;
+          width: 100%;
+          height: 100%;
 
           * {
             stroke: $color-black;
@@ -140,6 +142,13 @@ main {
           height: 30px;
         }
       }
+    }
+
+    .error {
+      top: calc(100% + 0.66em);
+      left: 50%;
+      transform: translate(-50%, 0);
+      letter-spacing: 0.05em;
     }
   }
 

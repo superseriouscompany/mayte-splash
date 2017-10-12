@@ -18,7 +18,9 @@ if( accessToken = qs('at') ) {
 
 function submit(evt) {
   if( $('.step.one').style.display === 'block' ) {
-    if( $('.js-promo').value.toLowerCase() !== 'treats!' ) { return showError('The promo code is incorrect') }
+    if( $('.js-promo').value.toLowerCase() !== 'treats!' ) {
+      return showError('The promo code is incorrect')
+    }
     return showStep('two')
   }
 
@@ -77,7 +79,14 @@ function linkedinAuth() {
 }
 
 function showError(msg) {
-  return alert(msg)
+  $('form input[type="text"]').addEventListener('input', clearError)
+  return $('form .error').innerHTML = msg
+}
+
+function clearError() {
+  console.log('hi')
+  $('form input[type="text"]').removeEventListener('input', clearError)
+  return $('form .error').innerHTML = ''
 }
 
 // https://css-tricks.com/snippets/javascript/get-url-variables/

@@ -9116,7 +9116,14 @@ function linkedinAuth() {
 }
 
 function showError(msg) {
-  return alert(msg);
+  $('form input[type="text"]').addEventListener('input', clearError);
+  return $('form .error').innerHTML = msg;
+}
+
+function clearError() {
+  console.log('hi');
+  $('form input[type="text"]').removeEventListener('input', clearError);
+  return $('form .error').innerHTML = '';
 }
 
 // https://css-tricks.com/snippets/javascript/get-url-variables/

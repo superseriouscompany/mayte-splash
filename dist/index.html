@@ -22,7 +22,7 @@
       Premium dating has arrived.
     </h2>
 
-    <form class="signup" onsubmit="return false">
+    <form class="signup relative" onsubmit="return false">
       <div class="step one" style="display: block">
         <input type="text"
                class="js-promo uppercase inline-block text-center"
@@ -47,13 +47,20 @@
       </div>
 
       <div class="step three" style="display: none">
-        <input type="email" class="js-email" placeholder="E-mail Address"/>
-        <input type="submit" value="Save Spot" />
+        <input type="email" class="js-email uppercase" placeholder="E-mail Address"/>
+        <span class="submitter relative inline-block v-bottom pointer">
+          <input type="submit"
+                 class="absolute pointer"
+                 value="" />
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" fill="#000000" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><polygon points="87.1,32 80,24.9 40.4,64.5 22,46 14.9,53.1 40.4,78.6  "/></g></svg>
+        </span>
       </div>
 
       <div class="step four" style="display: none">
         <h2>You're in.</h2>
       </div>
+
+      <div class="error absolute"></div>
     </form>
 
     <p class="release uppercase">Valentine's Day 2018</p>
