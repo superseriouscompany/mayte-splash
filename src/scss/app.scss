@@ -2,7 +2,7 @@
 @import './global';
 @import './color';
 
-$logo-height: 80px;
+$logo-height: 100px;
 
 html, body {
   height: 100%;
@@ -39,19 +39,18 @@ a {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.8);
   }
 
   video {
     min-height: 100vh;
     min-width: 100vw;
     filter: blur(2px);
-    // display: none;
   }
 }
 
 main {
-  padding: 2.5% 5% 140px;
+  padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
   display: flex;
@@ -60,19 +59,29 @@ main {
 
   .definition {
     font-weight: 200;
-    font-family: courier;
-    // font-size: 4.5vw;
+    font-family: 'Libre Baskerville', serif;
     font-size: 2.66em;
-    margin-bottom: 60px;
+    line-height: 1.5em;
+    padding: 0.5em 0.75em 0;
+    box-sizing: border-box;
   }
 
-  .tag {
-    margin-bottom: 60px;
-    letter-spacing: 0.1em;
-  }
 
   form.signup {
-    margin-bottom: 60px;
+    padding: 40px 0;
+    max-width: 90%;
+    margin: auto;
+
+    .tag {
+      margin-bottom: 40px;
+      letter-spacing: 0.1em;
+      line-height: 1.5em;
+      font-weight: 400;
+
+      .collapse {
+        margin-left: 0.4em;
+      }
+    }
 
     .step.one, .step.three {
       input[type="text"], input[type="email"] {
@@ -93,6 +102,7 @@ main {
         border-radius: 3px;
         width: 2em;
         height: 2em;
+        transition: all 0.2s ease;
 
         input[type="submit"] {
           background: none;
@@ -104,6 +114,7 @@ main {
         svg {
           width: 100%;
           height: 100%;
+          transition: all 0.2s ease;
 
           * {
             stroke: $color-black;
@@ -155,51 +166,66 @@ main {
     }
   }
 
+  footer {
+    text-align: center;
+    width: 100%;
+    height: $logo-height;
+    display: table;
+
+    .logo {
+      max-width: 100px;
+      max-height: 100px;
+      bottom: 0; left: 0;
+    }
+
+    .release {
+      letter-spacing: 0.1em;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
 }
 
-footer {
-  text-align: center;
-  width: 100%;
-
-  .logo {
-    max-width: 100px;
-    max-height: 100px;
-    bottom: 0; left: 0;
-  }
-
-  .release {
-    letter-spacing: 0.1em;
-  }
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   main {
-    padding: 5% 5% $logo-height;
-    display: block;
-    min-height: 500px;
     height: 100%;
+    min-height: auto;
 
     .definition {
       font-size: 8vw;
     }
-    .tag {
-      font-size: 4vw;
+
+    form.signup {
+      padding: 40px 0 80px;
+
+      .tag {
+        font-size: 5vw;
+        margin-bottom: 20px;
+        .collapse {
+          display: block;
+          margin-left: 0;
+        }
+      }
     }
 
-  }
-  footer {
-    text-align: left;
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%;
-    display: flex;
+    footer {
+      text-align: left;
+      // position: absolute;
+      bottom: 0; left: 0;
+      width: 100%;
+      display: flex;
+      min-height: $logo-height;
 
-    .logo {
-      position: relative!important;
-      vertical-align: middle;
-    }
-    .release {
-      flex: 1;
+      .logo {
+        position: relative!important;
+        vertical-align: middle;
+      }
+      .release {
+        flex: 1;
+        display: inline-flex;
+        font-size: 4vw;
+      }
     }
   }
+
 }
