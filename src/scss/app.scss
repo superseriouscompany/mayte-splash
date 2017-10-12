@@ -1,3 +1,4 @@
+@import "/assets/font/Gotham/stylesheet.css";
 @import './global';
 @import './color';
 
@@ -10,7 +11,7 @@ html, body {
 body {
   background: white;
   color: $color-black;
-  font-family: helvetica;
+  font-family: 'Gotham';
 
   *::selection {
     background: $color-black;

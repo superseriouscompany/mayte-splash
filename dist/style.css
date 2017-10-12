@@ -1,4 +1,4 @@
-.absolute {
+@import url(/assets/font/Gotham/stylesheet.css);.absolute {
   position: absolute; }
 
 .relative {
@@ -132,7 +132,7 @@ html, body {
 body {
   background: white;
   color: #231f20;
-  font-family: helvetica; }
+  font-family: 'Gotham'; }
   body *::-moz-selection {
     background: #231f20;
     color: white; }
