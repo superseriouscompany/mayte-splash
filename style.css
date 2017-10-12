@@ -192,12 +192,40 @@ main {
       background: none;
       border: none;
       color: black;
-      border-bottom: 2px solid black;
+      border-bottom: 2px solid #231f20;
       letter-spacing: 0.1em;
       padding-bottom: 0.25em;
       margin-right: 0.5em;
       outline: none;
       font-size: 1em; }
+      main form.signup .step.one input[type="text"]::-moz-selection {
+        background: #231f20;
+        color: white; }
+      main form.signup .step.one input[type="text"]::selection {
+        background: #231f20;
+        color: white; }
+    main form.signup .step.one .submitter {
+      border: 3px solid #231f20;
+      border-radius: 3px; }
+      main form.signup .step.one .submitter input[type="submit"] {
+        background: none;
+        border: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      main form.signup .step.one .submitter svg {
+        width: 2em;
+        height: 2em; }
+        main form.signup .step.one .submitter svg * {
+          stroke: #231f20;
+          fill: #231f20; }
+      main form.signup .step.one .submitter:hover {
+        background-color: #231f20;
+        color: white; }
+        main form.signup .step.one .submitter:hover svg * {
+          stroke: white;
+          fill: white; }
     main form.signup .step.two .cta {
       font-size: 1em;
       letter-spacing: 0.1em;
