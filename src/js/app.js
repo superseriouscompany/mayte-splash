@@ -5,7 +5,8 @@ $('form').addEventListener('submit', submit)
 $('.js-instagram').addEventListener('click', instagramAuth)
 $('.js-linkedin').addEventListener('click', linkedinAuth)
 
-$('main').addEventListener('touchstart', playVid)
+// need to find ios solution...?
+// $('main').addEventListener('touchstart', playVid)
 
 
 $('form .step.one input[type="text"]').focus();
