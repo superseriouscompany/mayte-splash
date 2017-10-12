@@ -9047,6 +9047,8 @@ $('form').addEventListener('submit', submit);
 $('.js-instagram').addEventListener('click', instagramAuth);
 $('.js-linkedin').addEventListener('click', linkedinAuth);
 
+$('form .step.one input[type="text"]').focus();
+
 var accessToken;
 if (accessToken = qs('at')) {
   if (qs('login') === 'li') {

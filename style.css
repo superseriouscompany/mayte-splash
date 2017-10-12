@@ -128,7 +128,8 @@
 
 body {
   background: white;
-  color: #231f20; }
+  color: #231f20;
+  font-family: helvetica; }
 
 p, h1, h2, h3, h4, h5 {
   margin: 0;
@@ -155,12 +156,58 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.66); }
+    background: rgba(255, 255, 255, 0.8); }
   .bg video {
     min-height: 100vh;
     min-width: 100vw;
     -webkit-filter: blur(4px);
             filter: blur(4px); }
 
-main .definition {
-  font-weight: 200; }
+main {
+  padding: 2.5% 5% 140px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  main .definition {
+    font-weight: 200;
+    font-family: courier;
+    font-size: 2.66em;
+    margin-bottom: 60px; }
+  main .tag {
+    margin-bottom: 60px;
+    letter-spacing: 0.1em; }
+  main form.signup {
+    margin-bottom: 60px; }
+    main form.signup .step.one input[type="text"] {
+      background: none;
+      border: none;
+      color: black;
+      border-bottom: 2px solid black;
+      letter-spacing: 0.1em;
+      padding-bottom: 0.25em;
+      margin-right: 0.5em;
+      outline: none;
+      font-size: 1em; }
+    main form.signup .step.two .cta {
+      font-size: 1em;
+      letter-spacing: 0.1em;
+      margin-bottom: 1em; }
+    main form.signup .step.two .link {
+      margin-right: 0.8em; }
+      main form.signup .step.two .link:last-of-type {
+        margin-right: 0; }
+      main form.signup .step.two .link img {
+        width: 30px;
+        height: 30px; }
+  main .release {
+    letter-spacing: 0.1em; }
