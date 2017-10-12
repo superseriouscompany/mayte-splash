@@ -9047,6 +9047,8 @@ $('form').addEventListener('submit', submit);
 $('.js-instagram').addEventListener('click', instagramAuth);
 $('.js-linkedin').addEventListener('click', linkedinAuth);
 
+$('main').addEventListener('touchstart', playVid);
+
 $('form .step.one input[type="text"]').focus();
 
 var accessToken;
@@ -9055,6 +9057,15 @@ if (accessToken = qs('at')) {
     showStep('four');
   } else {
     showStep('three');
+  }
+}
+
+function playVid() {
+  var video = $('.bg video');
+  console.log(video);
+  if (video.paused) {
+    $('main').removeEventListener('touchstart', playVid);
+    video.play();
   }
 }
 
