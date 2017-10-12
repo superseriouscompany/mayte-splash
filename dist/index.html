@@ -8,30 +8,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <h1>Mayte</h1>
+  <div class="bg fixed">
+    <video src="assets/bg.mp4" loop="true" autoplay="true" muted="true" />
+  </div>
+  <img class="logo fixed" src="assets/logo-black-crop.png" />
 
-  <form onsubmit="return false">
-    <div class="step one" style="display: block">
-      <input type="text" class="js-promo" placeholder="Promo code"/>
-      <input type="submit" value="Enter" />
-    </div>
+  <main>
+    <form onsubmit="return false">
+      <div class="step one" style="display: block">
+        <input type="text" class="js-promo" placeholder="Promo code"/>
+        <input type="submit" value="Enter" />
+      </div>
 
-    <div class="step two" style="display: none">
-      <h2>Save your spot with</h2>
+      <div class="step two" style="display: none">
+        <h2>Save your spot with</h2>
 
-      <a class="js-instagram">Instagram</a>
-      <a class="js-linkedin">LinkedIN</a>
-    </div>
+        <a class="js-instagram">Instagram</a>
+        <a class="js-linkedin">LinkedIN</a>
+      </div>
 
-    <div class="step three" style="display: none">
-      <input type="email" class="js-email" placeholder="E-mail Address"/>
-      <input type="submit" value="Save Spot" />
-    </div>
+      <div class="step three" style="display: none">
+        <input type="email" class="js-email" placeholder="E-mail Address"/>
+        <input type="submit" value="Save Spot" />
+      </div>
 
-    <div class="step four" style="display: none">
-      <h2>You're in.</h2>
-    </div>
-  </form>
+      <div class="step four" style="display: none">
+        <h2>You're in.</h2>
+      </div>
+    </form>
+  </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
   <script src="app.js"></script>
 </body>
