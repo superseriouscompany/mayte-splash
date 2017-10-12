@@ -18,21 +18,28 @@
       <span class="bold">Mayte</span> (māt/) Basque name meaning 'beloved' or 'lovable'.
     </h1>
 
-    <h2 class="tag">
+    <h2 class="tag uppercase">
       Premium dating has arrived.
     </h2>
 
     <form class="signup" onsubmit="return false">
       <div class="step one" style="display: block">
-        <input type="text" class="js-promo" placeholder="Promo code"/>
-        <input type="submit" value="Enter" />
+        <input type="text"
+               class="js-promo uppercase inline-block text-center"
+               placeholder="Promo code"/>
+        <input type="submit"
+               value="Enter" />
       </div>
 
       <div class="step two" style="display: none">
-        <h2>Save your spot with</h2>
+        <h2 class="cta uppercase">Save your spot with</h2>
 
-        <a class="js-instagram">Instagram</a>
-        <a class="js-linkedin">LinkedIN</a>
+        <a class="js-instagram link inline-block">
+          <img src="assets/social/ig-icon-black.svg" />
+        </a>
+        <a class="js-linkedin link inline-block">
+          <img src="assets/social/li-icon-black.svg" />
+        </a>
       </div>
 
       <div class="step three" style="display: none">
@@ -45,7 +52,7 @@
       </div>
     </form>
 
-    <p>Valentine's Day 2018</p>
+    <p class="release uppercase">Valentine's Day 2018</p>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
   <script src="app.js"></script>

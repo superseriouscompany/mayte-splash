@@ -4,6 +4,7 @@
 body {
   background: white;
   color: $color-black;
+  font-family: helvetica;
 }
 
 p, h1, h2, h3, h4, h5 {
@@ -32,7 +33,7 @@ a {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.66);
+    background: rgba(255,255,255,0.8);
   }
 
   video {
@@ -44,11 +45,65 @@ a {
 }
 
 main {
+  padding: 2.5% 5% 140px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
   .definition {
     font-weight: 200;
+    font-family: courier;
+    // font-size: 4.5vw;
+    font-size: 2.66em;
+    margin-bottom: 60px;
+  }
+
+  .tag {
+    margin-bottom: 60px;
+    letter-spacing: 0.1em;
   }
 
   form.signup {
+    margin-bottom: 60px;
 
+    .step.one {
+      input[type="text"] {
+        background: none;
+        border: none;
+        color: black;
+        border-bottom: 2px solid black;
+        letter-spacing: 0.1em;
+        padding-bottom: 0.25em;
+        margin-right: 0.5em;
+        outline: none;
+        font-size: 1em;
+      }
+    }
+
+    .step.two {
+      .cta {
+        font-size: 1em;
+        letter-spacing: 0.1em;
+        margin-bottom: 1em;
+      }
+      .link {
+        margin-right: 0.8em;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .release {
+    letter-spacing: 0.1em;
   }
 }
