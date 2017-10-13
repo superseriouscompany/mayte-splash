@@ -205,6 +205,10 @@ main {
           margin-left: 0;
         }
       }
+
+      .error {
+        top: calc(100% - 60px);
+      }
     }
 
     footer {
