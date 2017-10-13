@@ -286,6 +286,8 @@ main {
         main form.signup .tag .collapse {
           display: block;
           margin-left: 0; }
+      main form.signup .error {
+        top: calc(100% - 60px); }
     main footer {
       text-align: left;
       bottom: 0;
