@@ -8,6 +8,7 @@ form.signup {
     letter-spacing: 0.1em;
     line-height: 1.5em;
     font-weight: 400;
+    animation: fade-in-down 0.33s ease;
 
     .collapse {
       margin-left: 0.4em;
@@ -26,6 +27,7 @@ form.signup {
       outline: none;
       font-size: 1em;
       border-radius: 0;
+      animation: fade-in-up 0.33s ease;
     }
 
     .submitter {
@@ -34,6 +36,7 @@ form.signup {
       width: 2em;
       height: 2em;
       transition: all 0.2s ease;
+      animation: fade-in-up 0.33s ease;
 
       input[type="submit"] {
         background: none;
@@ -78,6 +81,7 @@ form.signup {
     .link {
       margin-right: 1em;
       transition: transform 0.2s ease;
+      animation: fade-in-up 0.2s ease;
 
       &:hover {
         transform: scale(1.1);
