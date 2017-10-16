@@ -9069,8 +9069,6 @@ function playVid() {
   }
 }
 
-showStep('two');
-
 function submit(evt) {
   if ($('.step.one').style.display === 'block') {
     if ($('.js-promo').value.toLowerCase() !== 'treats!') {
