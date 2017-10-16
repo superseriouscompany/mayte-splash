@@ -192,6 +192,8 @@ main {
             box-sizing: border-box; }
     main header h1 {
       font-size: 1em; }
+    main header .membership {
+      display: none; }
   main footer {
     text-align: center;
     width: 100%;
@@ -202,11 +204,38 @@ main {
       max-height: 100px;
       bottom: 0;
       left: 0; }
-    main footer .release {
+    main footer .tag {
       letter-spacing: 0.1em;
       display: table-cell;
       vertical-align: middle;
       line-height: 1.5em; }
+    main footer .partnership {
+      display: none;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap; }
+      main footer .partnership .sponsor {
+        margin-left: 0.2em; }
+        main footer .partnership .sponsor img {
+          width: 100px;
+          height: auto; }
+
+body.registering main header .definition {
+  display: none; }
+
+body.registering main header .membership {
+  display: block; }
+
+body.registering main footer .release {
+  display: none; }
+
+body.registering main footer .partnership {
+  display: table-cell; }
+
+@media screen and (max-width: 768px) {
+  main footer .partnership .collapse {
+    display: block; } }
 
 @media screen and (max-width: 600px) {
   main {
@@ -226,14 +255,29 @@ main {
       main footer .logo {
         position: relative !important;
         vertical-align: middle; }
-      main footer .release {
+      main footer .tag {
         -webkit-box-flex: 1;
             -ms-flex: 1;
                 flex: 1;
+        font-size: 3.33vw; }
+      main footer .release {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
-        display: inline-flex;
-        font-size: 4vw; } }
+        display: inline-flex; }
+      main footer .partnership {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column; }
+        main footer .partnership .sponsor {
+          height: 1.5em; }
+          main footer .partnership .sponsor img {
+            width: auto;
+            height: 100%; }
+  body.registering main footer .partnership {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; } }
 
 form.signup {
   padding: 40px 0;
@@ -286,9 +330,10 @@ form.signup {
         stroke: white;
         fill: white; }
   form.signup .step.two .cta {
-    font-size: 1em;
+    margin-bottom: 40px;
     letter-spacing: 0.1em;
-    margin-bottom: 1em; }
+    line-height: 1.5em;
+    font-weight: 400; }
   form.signup .step.two .link {
     margin-right: 1em;
     -webkit-transition: -webkit-transform 0.2s ease;
@@ -325,39 +370,6 @@ form.signup {
       height: 80px; }
     form.signup .error {
       top: calc(100% - 60px); } }
-
-.cta {
-  display: none; }
-
-.membership {
-  display: none; }
-
-.partnership {
-  display: none; }
-
-body.registering .definition {
-  display: none; }
-
-body.registering .membership {
-  display: block; }
-
-body.registering footer .release {
-  display: none; }
-
-body.registering .tag {
-  display: none; }
-
-body.registering .cta {
-  display: block; }
-
-body.registering .partnership {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%; }
-  body.registering .partnership img {
-    width: 87px;
-    margin-left: 6px; }
 
 body.done .cta {
   display: none; }

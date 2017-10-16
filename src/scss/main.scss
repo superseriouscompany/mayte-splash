@@ -17,6 +17,10 @@ main {
     h1 {
       font-size: 1em;
     }
+
+    .membership {
+      display: none;
+    }
   }
 
   footer {
@@ -31,14 +35,62 @@ main {
       bottom: 0; left: 0;
     }
 
-    .release {
+    .tag {
       letter-spacing: 0.1em;
       display: table-cell;
       vertical-align: middle;
       line-height: 1.5em;
     }
+
+    .partnership {
+      display: none;
+      flex-flow: row wrap;
+
+      .sponsor {
+        margin-left: 0.2em;
+        img {
+          width: 100px;
+          height: auto;
+        }
+      }
+    }
   }
 }
+
+body.registering {
+  main {
+    header {
+      .definition {
+        display: none;
+      }
+      .membership {
+        display: block;
+      }
+    }
+
+    footer {
+      .release {
+        display: none;
+      }
+      .partnership {
+        display: table-cell;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    footer {
+      .partnership {
+        .collapse {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 600px) {
   main {
@@ -61,10 +113,35 @@ main {
         position: relative!important;
         vertical-align: middle;
       }
-      .release {
+
+      .tag {
         flex: 1;
+        font-size: 3.33vw;
+      }
+
+      .release {
         display: inline-flex;
-        font-size: 4vw;
+      }
+
+      .partnership {
+        flex-flow: column;
+        .sponsor {
+          height: 1.5em;
+          img {
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  body.registering {
+    main {
+      footer {
+        .partnership {
+          display: inline-flex;
+        }
       }
     }
   }
