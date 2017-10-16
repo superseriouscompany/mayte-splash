@@ -9069,6 +9069,8 @@ function playVid() {
   }
 }
 
+showStep('two');
+
 function submit(evt) {
   if ($('.step.one').style.display === 'block') {
     if ($('.js-promo').value.toLowerCase() !== 'treats!') {
@@ -9101,6 +9103,7 @@ function submit(evt) {
 }
 
 function showStep(step) {
+  $('body').className += ' registering';
   document.querySelectorAll('.step').forEach(function (el) {
     el.style.display = 'none';
   });

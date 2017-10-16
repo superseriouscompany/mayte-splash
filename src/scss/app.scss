@@ -48,6 +48,8 @@ a {
   }
 }
 
+.cta { display: none }
+
 main {
   padding: 0;
   box-sizing: border-box;
@@ -231,4 +233,24 @@ main {
     }
   }
 
+}
+
+body.registering {
+  .definition { display: none }
+  footer .release { display: none }
+  .tag { display: none }
+
+  
+  .cta { display: block }
+  main form.signup .step.two .link img {
+    width: 100px;
+    height: 100px;
+  }
+  .partnership {
+    width: 100%;
+    img {
+      width: 87px;
+      margin-left: 6px;
+    }
+  }
 }
