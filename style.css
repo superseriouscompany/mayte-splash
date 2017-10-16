@@ -192,7 +192,9 @@ main {
     main header h1 {
       font-size: 1em; }
     main header .membership {
-      display: none; }
+      display: none;
+      -webkit-animation: fade-in-down 0.33s ease;
+              animation: fade-in-down 0.33s ease; }
   main footer {
     text-align: center;
     width: 100%;
@@ -213,7 +215,9 @@ main {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row wrap;
-              flex-flow: row wrap; }
+              flex-flow: row wrap;
+      -webkit-animation: fade-in-up 0.33s ease;
+              animation: fade-in-up 0.33s ease; }
       main footer .partnership .sponsor {
         margin-left: 0.2em; }
         main footer .partnership .sponsor img {
@@ -286,7 +290,9 @@ form.signup {
     margin-bottom: 40px;
     letter-spacing: 0.1em;
     line-height: 1.5em;
-    font-weight: 400; }
+    font-weight: 400;
+    -webkit-animation: fade-in-down 0.33s ease;
+            animation: fade-in-down 0.33s ease; }
     form.signup .tag .collapse {
       margin-left: 0.4em; }
   form.signup .step.one input[type="text"], form.signup .step.one input[type="email"], form.signup .step.three input[type="text"], form.signup .step.three input[type="email"] {
@@ -299,14 +305,18 @@ form.signup {
     margin-right: 0.5em;
     outline: none;
     font-size: 1em;
-    border-radius: 0; }
+    border-radius: 0;
+    -webkit-animation: fade-in-up 0.33s ease;
+            animation: fade-in-up 0.33s ease; }
   form.signup .step.one .submitter, form.signup .step.three .submitter {
     border: 3px solid #231f20;
     border-radius: 3px;
     width: 2em;
     height: 2em;
     -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
+    transition: all 0.2s ease;
+    -webkit-animation: fade-in-up 0.33s ease;
+            animation: fade-in-up 0.33s ease; }
     form.signup .step.one .submitter input[type="submit"], form.signup .step.three .submitter input[type="submit"] {
       background: none;
       border: none;
@@ -338,7 +348,9 @@ form.signup {
     -webkit-transition: -webkit-transform 0.2s ease;
     transition: -webkit-transform 0.2s ease;
     transition: transform 0.2s ease;
-    transition: transform 0.2s ease, -webkit-transform 0.2s ease; }
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    -webkit-animation: fade-in-up 0.2s ease;
+            animation: fade-in-up 0.2s ease; }
     form.signup .step.two .link:hover {
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
@@ -374,3 +386,57 @@ form.signup {
 
 body.done .cta {
   display: none; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    color: blue;
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    color: blue;
+    opacity: 1; } }
+
+@-webkit-keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
