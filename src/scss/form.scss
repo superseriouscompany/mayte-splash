@@ -1,0 +1,131 @@
+form.signup {
+  padding: 40px 0;
+  max-width: 90%;
+  margin: auto;
+
+  .tag {
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    font-weight: 400;
+
+    .collapse {
+      margin-left: 0.4em;
+    }
+  }
+
+  .step.one, .step.three {
+    input[type="text"], input[type="email"] {
+      background: none;
+      border: none;
+      color: black;
+      border-bottom: 2px solid $color-black;
+      letter-spacing: 0.1em;
+      padding-bottom: 0.25em;
+      margin-right: 0.5em;
+      outline: none;
+      font-size: 1em;
+      border-radius: 0;
+    }
+
+    .submitter {
+      border: 3px solid $color-black;
+      border-radius: 3px;
+      width: 2em;
+      height: 2em;
+      transition: all 0.2s ease;
+
+      input[type="submit"] {
+        background: none;
+        border: none;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s ease;
+
+        * {
+          stroke: $color-black;
+          fill: $color-black;
+        }
+      }
+
+      &:hover {
+        background-color: $color-black;
+        color: white;
+
+        svg {
+          * {
+            stroke: white;
+            fill: white;
+          }
+        }
+      }
+    }
+
+  }
+
+  .step.two {
+    .cta {
+      font-size: 1em;
+      letter-spacing: 0.1em;
+      margin-bottom: 1em;
+    }
+    .link {
+      margin-right: 1em;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .error {
+    top: calc(100% - 20px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    letter-spacing: 0.05em;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  form.signup {
+    padding: 40px 0 80px;
+
+    .tag {
+      font-size: 5vw;
+      margin-bottom: 20px;
+      .collapse {
+        display: block;
+        margin-left: 0;
+      }
+    }
+
+    .step.two {
+      .link {
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+
+    .error {
+      top: calc(100% - 60px);
+    }
+  }
+}

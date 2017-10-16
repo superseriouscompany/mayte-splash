@@ -9072,7 +9072,7 @@ function playVid() {
 function submit(evt) {
   if ($('.step.one').style.display === 'block') {
     if ($('.js-promo').value.toLowerCase() !== 'treats!') {
-      return showError('The promo code is incorrect');
+      return showError('Promo code is incorrect');
     }
     return showStep('two');
   }
