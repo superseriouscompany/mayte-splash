@@ -166,6 +166,9 @@ a {
     -webkit-filter: blur(2px);
             filter: blur(2px); }
 
+.cta {
+  display: none; }
+
 main {
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -308,3 +311,25 @@ main {
         display: -ms-inline-flexbox;
         display: inline-flex;
         font-size: 4vw; } }
+
+body.registering .definition {
+  display: none; }
+
+body.registering footer .release {
+  display: none; }
+
+body.registering .tag {
+  display: none; }
+
+body.registering .cta {
+  display: block; }
+
+body.registering main form.signup .step.two .link img {
+  width: 100px;
+  height: 100px; }
+
+body.registering .partnership {
+  width: 100%; }
+  body.registering .partnership img {
+    width: 87px;
+    margin-left: 6px; }
