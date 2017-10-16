@@ -245,11 +245,14 @@ main {
       margin-bottom: 1em; }
     main form.signup .step.two .link {
       margin-right: 0.8em; }
+      main form.signup .step.two .link:hover {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1); }
       main form.signup .step.two .link:last-of-type {
         margin-right: 0; }
       main form.signup .step.two .link img {
-        width: 30px;
-        height: 30px; }
+        width: 100px;
+        height: 100px; }
     main form.signup .error {
       top: calc(100% - 20px);
       left: 50%;
@@ -308,3 +311,40 @@ main {
         display: -ms-inline-flexbox;
         display: inline-flex;
         font-size: 4vw; } }
+
+.cta {
+  display: none; }
+
+.membership {
+  display: none; }
+
+.partnership {
+  display: none; }
+
+body.registering .definition {
+  display: none; }
+
+body.registering footer .release {
+  display: none; }
+
+body.registering .tag {
+  display: none; }
+
+body.registering .membership {
+  display: block;
+  font-family: Gotham; }
+
+body.registering .cta {
+  display: block; }
+
+body.registering .partnership {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%; }
+  body.registering .partnership img {
+    width: 87px;
+    margin-left: 6px; }
+
+body.done .cta {
+  display: none; }

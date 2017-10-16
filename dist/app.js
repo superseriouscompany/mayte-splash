@@ -9063,7 +9063,6 @@ if (accessToken = qs('at')) {
 
 function playVid() {
   var video = $('.bg video');
-  console.log(video);
   if (video.paused) {
     $('main').removeEventListener('touchstart', playVid);
     video.play();
@@ -9102,6 +9101,10 @@ function submit(evt) {
 }
 
 function showStep(step) {
+  $('body').className += ' registering';
+  if (step === 'four') {
+    $('body').className += ' done';
+  }
   document.querySelectorAll('.step').forEach(function (el) {
     el.style.display = 'none';
   });
@@ -9133,7 +9136,6 @@ function showError(msg) {
 }
 
 function clearError() {
-  console.log('hi');
   $('form input[type="text"]').removeEventListener('input', clearError);
   return $('form .error').innerHTML = '';
 }
