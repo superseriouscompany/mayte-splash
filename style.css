@@ -164,8 +164,7 @@ a {
     min-height: 100vh;
     min-width: 100vw;
     -webkit-filter: blur(2px);
-            filter: blur(2px);
-    display: none; }
+            filter: blur(2px); }
 
 main {
   padding: 0;
