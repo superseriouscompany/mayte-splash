@@ -59,6 +59,7 @@ function submit(evt) {
 
 function showStep(step) {
   $('body').className += ' registering'
+  if( step === 'four' ) { $('body').className += ' done' }
   document.querySelectorAll('.step').forEach(function(el) {
     el.style.display = 'none'
   })

@@ -247,7 +247,7 @@ body.registering {
   .tag { display: none }
 
   .membership { display: block; font-family: Gotham; }
-  .cta { display: block }
+  .cta { display: block; }
   .partnership {
     display: inline-flex;
     width: 100%;
@@ -256,4 +256,8 @@ body.registering {
       margin-left: 6px;
     }
   }
+}
+
+body.done {
+  .cta { display: none; }
 }

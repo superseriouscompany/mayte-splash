@@ -345,3 +345,6 @@ body.registering .partnership {
   body.registering .partnership img {
     width: 87px;
     margin-left: 6px; }
+
+body.done .cta {
+  display: none; }
