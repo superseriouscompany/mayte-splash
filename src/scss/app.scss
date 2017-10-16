@@ -48,8 +48,6 @@ a {
   }
 }
 
-.cta { display: none }
-
 main {
   padding: 0;
   box-sizing: border-box;
@@ -147,13 +145,17 @@ main {
       .link {
         margin-right: 0.8em;
 
+        &:hover {
+          transform: scale(1.1);
+        }
+
         &:last-of-type {
           margin-right: 0;
         }
 
         img {
-          width: 30px;
-          height: 30px;
+          width: 100px;
+          height: 100px;
         }
       }
     }
@@ -235,18 +237,19 @@ main {
 
 }
 
+.cta { display: none }
+.membership { display: none }
+.partnership { display: none }
+
 body.registering {
   .definition { display: none }
   footer .release { display: none }
   .tag { display: none }
 
-  
+  .membership { display: block; font-family: Gotham; }
   .cta { display: block }
-  main form.signup .step.two .link img {
-    width: 100px;
-    height: 100px;
-  }
   .partnership {
+    display: inline-flex;
     width: 100%;
     img {
       width: 87px;
