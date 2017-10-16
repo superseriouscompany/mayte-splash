@@ -9050,6 +9050,9 @@ $('.js-linkedin').addEventListener('click', linkedinAuth);
 // need to find ios solution...?
 $('main').addEventListener('touchstart', playVid);
 
+if (window.location.pathname.indexOf('/treats') > -1) {
+  $('form .step.one input[type="text"]').value = "treats!";
+}
 $('form .step.one input[type="text"]').focus();
 
 var accessToken;
