@@ -9104,7 +9104,7 @@ function submit(evt) {
 }
 
 function showStep(step) {
-  $('body').className += ' registering';
+  // $('body').className += ' registering'
   if (step === 'four') {
     $('body').className += ' done';
   }

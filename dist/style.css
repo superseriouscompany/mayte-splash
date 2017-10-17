@@ -357,8 +357,8 @@ form.signup {
     form.signup .step.two .link:last-of-type {
       margin-right: 0; }
     form.signup .step.two .link img {
-      width: 100px;
-      height: 100px; }
+      width: 80px;
+      height: 80px; }
   form.signup .step.four {
     line-height: 1.5; }
   form.signup .error {
