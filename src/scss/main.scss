@@ -59,7 +59,7 @@ main {
   }
 }
 
-body.registering {
+body.done {
   main {
     header {
       .definition {
@@ -67,15 +67,6 @@ body.registering {
       }
       .membership {
         display: block;
-      }
-    }
-
-    footer {
-      .release {
-        display: none;
-      }
-      .partnership {
-        display: table-cell;
       }
     }
   }

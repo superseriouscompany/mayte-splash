@@ -15,8 +15,39 @@ form.signup {
     }
   }
 
-  .step.one, .step.three {
-    input[type="text"], input[type="email"] {
+  .step.one {
+    .cta {
+      margin-bottom: 40px;
+      letter-spacing: 0.1em;
+      line-height: 1.5em;
+      font-weight: 400;
+    }
+    .link {
+      margin-right: 1em;
+      transition: transform 0.2s ease;
+      animation: fade-in-up 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .step.three {
+    line-height: 1.5;
+  }
+
+  .step.two {
+    input[type="email"] {
       background: none;
       border: none;
       color: black;
@@ -68,38 +99,6 @@ form.signup {
         }
       }
     }
-
-  }
-
-  .step.two {
-    .cta {
-      margin-bottom: 40px;
-      letter-spacing: 0.1em;
-      line-height: 1.5em;
-      font-weight: 400;
-    }
-    .link {
-      margin-right: 1em;
-      transition: transform 0.2s ease;
-      animation: fade-in-up 0.2s ease;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-
-      img {
-        width: 80px;
-        height: 80px;
-      }
-    }
-  }
-
-  .step.four {
-    line-height: 1.5;
   }
 
   .error {

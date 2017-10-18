@@ -224,17 +224,11 @@ main {
           width: 100px;
           height: auto; }
 
-body.registering main header .definition {
+body.done main header .definition {
   display: none; }
 
-body.registering main header .membership {
+body.done main header .membership {
   display: block; }
-
-body.registering main footer .release {
-  display: none; }
-
-body.registering main footer .partnership {
-  display: table-cell; }
 
 @media screen and (max-width: 768px) {
   main footer .partnership .collapse {
@@ -295,7 +289,30 @@ form.signup {
             animation: fade-in-down 0.33s ease; }
     form.signup .tag .collapse {
       margin-left: 0.4em; }
-  form.signup .step.one input[type="text"], form.signup .step.one input[type="email"], form.signup .step.three input[type="text"], form.signup .step.three input[type="email"] {
+  form.signup .step.one .cta {
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    font-weight: 400; }
+  form.signup .step.one .link {
+    margin-right: 1em;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    -webkit-animation: fade-in-up 0.2s ease;
+            animation: fade-in-up 0.2s ease; }
+    form.signup .step.one .link:hover {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+    form.signup .step.one .link:last-of-type {
+      margin-right: 0; }
+    form.signup .step.one .link img {
+      width: 80px;
+      height: 80px; }
+  form.signup .step.three {
+    line-height: 1.5; }
+  form.signup .step.two input[type="email"] {
     background: none;
     border: none;
     color: black;
@@ -308,7 +325,7 @@ form.signup {
     border-radius: 0;
     -webkit-animation: fade-in-up 0.33s ease;
             animation: fade-in-up 0.33s ease; }
-  form.signup .step.one .submitter, form.signup .step.three .submitter {
+  form.signup .step.two .submitter {
     border: 3px solid #231f20;
     border-radius: 3px;
     width: 2em;
@@ -317,50 +334,27 @@ form.signup {
     transition: all 0.2s ease;
     -webkit-animation: fade-in-up 0.33s ease;
             animation: fade-in-up 0.33s ease; }
-    form.signup .step.one .submitter input[type="submit"], form.signup .step.three .submitter input[type="submit"] {
+    form.signup .step.two .submitter input[type="submit"] {
       background: none;
       border: none;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
-    form.signup .step.one .submitter svg, form.signup .step.three .submitter svg {
+    form.signup .step.two .submitter svg {
       width: 100%;
       height: 100%;
       -webkit-transition: all 0.2s ease;
       transition: all 0.2s ease; }
-      form.signup .step.one .submitter svg *, form.signup .step.three .submitter svg * {
+      form.signup .step.two .submitter svg * {
         stroke: #231f20;
         fill: #231f20; }
-    form.signup .step.one .submitter:hover, form.signup .step.three .submitter:hover {
+    form.signup .step.two .submitter:hover {
       background-color: #231f20;
       color: white; }
-      form.signup .step.one .submitter:hover svg *, form.signup .step.three .submitter:hover svg * {
+      form.signup .step.two .submitter:hover svg * {
         stroke: white;
         fill: white; }
-  form.signup .step.two .cta {
-    margin-bottom: 40px;
-    letter-spacing: 0.1em;
-    line-height: 1.5em;
-    font-weight: 400; }
-  form.signup .step.two .link {
-    margin-right: 1em;
-    -webkit-transition: -webkit-transform 0.2s ease;
-    transition: -webkit-transform 0.2s ease;
-    transition: transform 0.2s ease;
-    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
-    -webkit-animation: fade-in-up 0.2s ease;
-            animation: fade-in-up 0.2s ease; }
-    form.signup .step.two .link:hover {
-      -webkit-transform: scale(1.1);
-              transform: scale(1.1); }
-    form.signup .step.two .link:last-of-type {
-      margin-right: 0; }
-    form.signup .step.two .link img {
-      width: 80px;
-      height: 80px; }
-  form.signup .step.four {
-    line-height: 1.5; }
   form.signup .error {
     top: calc(100% - 20px);
     left: 50%;

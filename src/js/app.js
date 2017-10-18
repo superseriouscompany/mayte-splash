@@ -9,17 +9,13 @@ $('.js-linkedin').addEventListener('click', linkedinAuth)
 $('main').addEventListener('touchstart', playVid)
 
 
-if (window.location.pathname.indexOf('/treats') > -1) {
-  $('form .step.one input[type="text"]').value = "treats!"
-}
-$('form .step.one input[type="text"]').focus();
 
 var accessToken;
 if( accessToken = qs('at') ) {
   if( qs('login') === 'li' ) {
-    showStep('four')
-  } else {
     showStep('three')
+  } else {
+    showStep('two')
   }
 }
 
@@ -32,14 +28,7 @@ function playVid() {
 }
 
 function submit(evt) {
-  if( $('.step.one').style.display === 'block' ) {
-    if( $('.js-promo').value.toLowerCase() !== 'treats!' ) {
-      return showError('Promo code is incorrect')
-    }
-    return showStep('two')
-  }
-
-  if( $('.step.three').style.display === 'block' ) {
+  if( $('.step.two').style.display === 'block' ) {
     // from http://emailregex.com/
     var regex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
     var email = $('.js-email').value
@@ -50,7 +39,7 @@ function submit(evt) {
       body:        {email: email},
       accessToken: accessToken,
     }).then(() => {
-      return showStep('four')
+      return showStep('three')
     }).catch((err) => {
       console.error(err)
       showError(err.message)
@@ -61,8 +50,7 @@ function submit(evt) {
 }
 
 function showStep(step) {
-  // $('body').className += ' registering'
-  if( step === 'four' ) { $('body').className += ' done' }
+  if( step === 'three' ) { $('body').className += ' done' }
   document.querySelectorAll('.step').forEach(function(el) {
     el.style.display = 'none'
   })
@@ -96,12 +84,12 @@ function linkedinAuth() {
 }
 
 function showError(msg) {
-  $('form input[type="text"]').addEventListener('input', clearError)
+  $('form input').addEventListener('input', clearError)
   return $('form .error').innerHTML = msg
 }
 
 function clearError() {
-  $('form input[type="text"]').removeEventListener('input', clearError)
+  $('form input').removeEventListener('input', clearError)
   return $('form .error').innerHTML = ''
 }
 
