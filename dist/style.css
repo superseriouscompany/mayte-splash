@@ -132,13 +132,28 @@ html, body {
 body {
   background: white;
   color: #231f20;
-  font-family: 'Gotham'; }
+  font-family: 'Nunito'; }
   body *::-moz-selection {
     background: #231f20;
     color: white; }
   body *::selection {
     background: #231f20;
     color: white; }
+
+.logo, header, form {
+  display: none !important; }
+
+.unicorn-logo {
+  background-color: white;
+  text-align: center; }
+  .unicorn-logo img {
+    width: 80%;
+    max-width: 600px; }
+
+.email {
+  text-align: center;
+  font-size: 25px;
+  padding: 1em; }
 
 p, h1, h2, h3, h4, h5 {
   margin: 0;
