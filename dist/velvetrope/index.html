@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html style="height: 100%; padding: 0; margin: 0; border: 0;">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <!-- TODO: either don't serve this from the API locally, or do serve it from the API in production -->
+  </head>
+  <body style="padding: 0; border: 0; margin: 0; height: 100%; display: flex; justify-content: center; align-items: center;">
+    <h1 style="font-family: 'Nunito', sans-serif; text-align: center; padding: 1em; ">
+      Valentine's day 2018 is in
+      <span id="days"></span> days,
+      <span id="hours"></span> hours,
+      <span id="minutes"></span> minutes,
+      and <span id="seconds"></span> seconds.
+      <br /><br />
+      (We Need Steve!)
+    </h1>
+
+    <script>
+      updateTime()
+
+      function updateTime() {
+        var time = getTimeRemaining('2018-02-14')
+        document.querySelector('#days').innerHTML = time.days
+        document.querySelector('#hours').innerHTML = time.hours
+        document.querySelector('#minutes').innerHTML = time.minutes
+        document.querySelector('#seconds').innerHTML = time.seconds
+        setTimeout(updateTime, 1000)
+      }
+
+      function getTimeRemaining(endtime){
+        var t = Date.parse(endtime) - Date.parse(new Date());
+        var seconds = Math.floor( (t/1000) % 60 );
+        var minutes = Math.floor( (t/1000/60) % 60 );
+        var hours = Math.floor( (t/(1000*60*60)) % 24 );
+        var days = Math.floor( t/(1000*60*60*24) );
+        return {
+          'total': t,
+          'days': days,
+          'hours': hours,
+          'minutes': minutes,
+          'seconds': seconds
+        };
+      }
+    </script>
+  </body>
+</html>

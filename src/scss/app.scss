@@ -10,13 +10,32 @@ html, body {
 body {
   background: white;
   color: $color-black;
-  font-family: 'Gotham';
+  font-family: 'Nunito';
 
   *::selection {
     background: $color-black;
     color: white;
   }
 }
+
+// this block is the unicorn bullshit
+.logo, header, form {
+  display: none !important;
+}
+.unicorn-logo {
+  background-color: white;
+  text-align: center;
+  img {
+    width: 80%;
+    max-width: 600px;
+  }
+}
+.email {
+  text-align: center;
+  font-size: 25px;
+  padding: 1em;
+}
+
 
 p, h1, h2, h3, h4, h5 {
   margin: 0;
