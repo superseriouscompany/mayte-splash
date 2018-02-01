@@ -50,13 +50,14 @@ a {
 @import './video';
 @import './main';
 @import './form';
+@import './bg';
 
 
 body.done {
   .cta { display: none; }
 }
 
-.footerLink { color: silver; text-decoration: underline  }
+.footer-link { color: silver; text-decoration: underline  }
 
 @keyframes fade-in {
   0% {

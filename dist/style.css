@@ -393,10 +393,18 @@ form.signup {
     form.signup .error {
       top: calc(100% - 60px); } }
 
+#bg {
+  background: pink;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
 body.done .cta {
   display: none; }
 
-.footerLink {
+.footer-link {
   color: silver;
   text-decoration: underline; }
 
