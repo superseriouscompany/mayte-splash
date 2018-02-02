@@ -1,7 +1,8 @@
 @import './global';
 @import './color';
 
-$logo-height: 100px;
+$footer-height: 1.5em;
+$mayte-white: rgba(243,243,243,1);
 
 html, body {
   height: 100%;
@@ -9,8 +10,8 @@ html, body {
 
 body {
   background: white;
-  color: $color-black;
-  font-family: 'Nunito';
+  color: $mayte-white;
+  font-family: 'Futura';
 
   *::selection {
     background: $color-black;
@@ -18,40 +19,19 @@ body {
   }
 }
 
-// this block is the unicorn bullshit
-.logo, header, form {
-  display: none !important;
+a {
+  color: $mayte-white;
 }
-.unicorn-logo {
-  background-color: white;
-  text-align: center;
-  img {
-    width: 80%;
-    max-width: 600px;
-  }
-}
-.email {
-  text-align: center;
-  font-size: 25px;
-  padding: 1em;
-}
-
 
 p, h1, h2, h3, h4, h5 {
   margin: 0;
   font-weight: 300;
 }
 
-a {
-  cursor: pointer;
-  color: cornflowerblue;
-}
-
-@import './video';
 @import './main';
+@import './footer';
 @import './form';
 @import './stars';
-
 
 body.done {
   .cta { display: none; }

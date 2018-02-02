@@ -1,0 +1,39 @@
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-size: 0.8em;
+  padding: 1em;
+  box-sizing: border-box;
+
+  .copyright {
+    color: $mayte-white;
+  }
+
+  .terms {
+    a {
+      color: $mayte-white;
+      &:first-of-type {
+        margin-right: 0.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+    footer {
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0 2em 0;
+
+      .terms {
+        order: 1;
+        margin-bottom: 0.66em;
+      }
+      .copyright {
+        order: 2;
+      }
+    }
+}
