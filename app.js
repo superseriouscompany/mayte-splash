@@ -9105,7 +9105,7 @@ var StarSheet = function () {
         s.appendChild(dup);
       }
 
-      // s.style.animation = `star-sheet ${length}s linear infinite`
+      s.style.animation = 'star-sheet ' + length + 's linear infinite';
     }
   }]);
 

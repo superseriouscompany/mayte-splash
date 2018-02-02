@@ -130,9 +130,13 @@ html, body {
   height: 100%; }
 
 body {
-  background: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(#232037));
+  background-image: linear-gradient(black, #232037);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #f3f3f3;
-  font-family: 'Futura'; }
+  font-family: 'Futura';
+  margin: 0; }
   body *::-moz-selection {
     background: #231f20;
     color: white; }
@@ -170,6 +174,10 @@ main {
     main .phone .img-cont img {
       height: 100%;
       width: auto; }
+  main .phone .app-store {
+    display: block;
+    margin: 1em auto 0;
+    max-width: 120px; }
   main .content {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -193,16 +201,23 @@ main {
   main .cnr {
     min-width: 300px;
     padding: 2em 0; }
-  main .logos .icon {
-    max-width: 80px;
-    margin-bottom: 1em; }
-  main .logos .type {
-    max-width: 150px;
+  main .logos {
+    max-width: 100px;
+    display: block;
     margin: 0 auto; }
+    main .logos .icon {
+      width: 66%;
+      margin-bottom: 1em; }
+    main .logos .type {
+      width: 100%;
+      margin: 0 auto; }
   main .tag {
-    margin: 1em 0;
+    margin: 1em 0 0.33em;
     font-size: 3em;
-    letter-spacing: 0.1em; }
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    -webkit-transform: translateX(0.05em);
+            transform: translateX(0.05em); }
 
 @media screen and (max-width: 800px) {
   main {
@@ -228,6 +243,12 @@ main {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; } }
+
+@media screen and (max-width: 480px) {
+  main .tag {
+    font-size: 10vw; }
+  main .email {
+    font-size: 3.5vw; } }
 
 footer {
   width: 100%;
@@ -377,7 +398,7 @@ form.signup {
 #stars {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0; }
 
