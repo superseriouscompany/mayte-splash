@@ -16,6 +16,12 @@ main {
         width: auto;
       }
     }
+
+    .app-store {
+      display: block;
+      margin: 1em auto 0;
+      max-width: 120px;
+    }
   }
 
   .content {
@@ -35,20 +41,25 @@ main {
   }
 
   .logos {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
     .icon {
-      max-width: 80px;
+      width: 66%;
       margin-bottom: 1em;
     }
     .type {
-      max-width: 150px;
+      width: 100%;
       margin: 0 auto;
     }
   }
 
   .tag {
-    margin: 1em 0;
+    margin: 1em 0 0.33em;
     font-size: 3em;
     letter-spacing: 0.1em;
+    font-weight: 700;
+    transform: translateX(0.05em);
   }
 }
 
@@ -78,5 +89,16 @@ main {
   }
   .cnr.copy {
     order: 1
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main {
+    .tag {
+      font-size: 10vw;
+    }
+    .email {
+      font-size: 3.5vw;
+    }
   }
 }

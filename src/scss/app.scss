@@ -9,9 +9,12 @@ html, body {
 }
 
 body {
-  background: white;
+  background-image: linear-gradient(rgba(0,0,0,1), #232037);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: $mayte-white;
   font-family: 'Futura';
+  margin: 0;
 
   *::selection {
     background: $color-black;
