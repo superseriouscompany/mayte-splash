@@ -9056,10 +9056,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var stars = document.getElementById('stars');
-
 var space = stars.getElementById('space');
-space.setAttribute('width', window.innerWidth);
-space.setAttribute('height', window.innerHeight);
 
 var mayteWhite = function mayteWhite(a) {
   return 'rgba(243,243,243,' + (!a ? a === 0 ? 0 : 1 : a) + ')';
@@ -9085,25 +9082,25 @@ var StarSheet = function () {
       var sizer = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
       sizer.setAttribute('x', 0);
       sizer.setAttribute('y', 0);
-      sizer.setAttribute('width', window.innerWidth);
-      sizer.setAttribute('height', window.innerHeight * 2);
+      sizer.setAttribute('width', '200%');
+      sizer.setAttribute('height', '200%');
       sizer.setAttribute('fill', 'rgba(0,0,0,0)');
       s.appendChild(sizer);
 
       for (var i = 0; i < count; i++) {
-        var cx = Math.random() * (window.innerWidth - radius) + radius;
-        var cy = Math.random() * (window.innerHeight - radius) + radius;
+        var cx = Math.random() * (100 - radius) + radius;
+        var cy = Math.random() * (100 - radius) + radius;
 
         var star = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        star.setAttribute('cx', cx);
-        star.setAttribute('cy', cy);
+        star.setAttribute('cx', cx + '%');
+        star.setAttribute('cy', cy + '%');
         star.setAttribute('r', radius);
         star.setAttribute('fill', fill);
         s.appendChild(star);
 
         var dup = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        dup.setAttribute('cx', cx);
-        dup.setAttribute('cy', window.innerHeight + cy);
+        dup.setAttribute('cx', cx + '%');
+        dup.setAttribute('cy', 100 + cy + '%');
         dup.setAttribute('r', radius);
         dup.setAttribute('fill', fill);
         s.appendChild(dup);
