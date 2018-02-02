@@ -9061,7 +9061,6 @@ var space = stars.getElementById('space');
 var mayteWhite = function mayteWhite(a) {
   return 'rgba(243,243,243,' + (!a ? a === 0 ? 0 : 1 : a) + ')';
 };
-var starRadius = 5;
 
 var StarSheet = function () {
   function StarSheet(canvas) {
@@ -9075,15 +9074,15 @@ var StarSheet = function () {
     key: 'writeSheet',
     value: function writeSheet(s) {
       var count = parseInt(s.getAttribute('data-count'));
-      var radius = parseInt(s.getAttribute('data-radius'));
+      var radius = parseFloat(s.getAttribute('data-radius'), 10);
       var fill = s.getAttribute('data-fill');
       var length = parseInt(s.getAttribute('data-length'));
 
       var sizer = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
       sizer.setAttribute('x', 0);
       sizer.setAttribute('y', 0);
-      sizer.setAttribute('width', '200%');
-      sizer.setAttribute('height', '200%');
+      sizer.setAttribute('width', 200);
+      sizer.setAttribute('height', 200);
       sizer.setAttribute('fill', 'rgba(0,0,0,0)');
       s.appendChild(sizer);
 
@@ -9092,15 +9091,15 @@ var StarSheet = function () {
         var cy = Math.random() * (100 - radius) + radius;
 
         var star = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        star.setAttribute('cx', cx + '%');
-        star.setAttribute('cy', cy + '%');
+        star.setAttribute('cx', '' + cx);
+        star.setAttribute('cy', '' + cy);
         star.setAttribute('r', radius);
         star.setAttribute('fill', fill);
         s.appendChild(star);
 
         var dup = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        dup.setAttribute('cx', cx + '%');
-        dup.setAttribute('cy', 100 + cy + '%');
+        dup.setAttribute('cx', '' + cx);
+        dup.setAttribute('cy', '' + (100 + cy));
         dup.setAttribute('r', radius);
         dup.setAttribute('fill', fill);
         s.appendChild(dup);
