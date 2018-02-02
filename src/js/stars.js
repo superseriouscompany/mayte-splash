@@ -1,8 +1,5 @@
 const stars = document.getElementById('stars')
-
 const space = stars.getElementById('space')
-space.setAttribute('width', window.innerWidth)
-space.setAttribute('height', window.innerHeight)
 
 const mayteWhite = a => `rgba(243,243,243,${!a ? a === 0 ? 0 : 1 : a})`
 const starRadius = 5
@@ -22,25 +19,25 @@ class StarSheet {
     const sizer = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
     sizer.setAttribute('x', 0)
     sizer.setAttribute('y', 0)
-    sizer.setAttribute('width', window.innerWidth)
-    sizer.setAttribute('height', window.innerHeight * 2)
+    sizer.setAttribute('width', '200%')
+    sizer.setAttribute('height', '200%')
     sizer.setAttribute('fill', 'rgba(0,0,0,0)')
     s.appendChild(sizer)
 
     for (let i = 0; i < count; i++) {
-      const cx = Math.random()*(window.innerWidth-radius)+radius
-      const cy = Math.random()*(window.innerHeight-radius)+radius
+      const cx = Math.random()*(100-radius)+radius
+      const cy = Math.random()*(100-radius)+radius
 
       const star = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
-      star.setAttribute('cx', cx)
-      star.setAttribute('cy', cy)
+      star.setAttribute('cx', `${cx}%`)
+      star.setAttribute('cy', `${cy}%`)
       star.setAttribute('r', radius)
       star.setAttribute('fill', fill)
       s.appendChild(star)
 
       const dup = document.createElementNS('http://www.w3.org/2000/svg', 'circle')
-      dup.setAttribute('cx', cx)
-      dup.setAttribute('cy', window.innerHeight+cy)
+      dup.setAttribute('cx', `${cx}%`)
+      dup.setAttribute('cy', `${100+cy}%`)
       dup.setAttribute('r', radius)
       dup.setAttribute('fill', fill)
       s.appendChild(dup)
