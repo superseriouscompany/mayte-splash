@@ -42,7 +42,18 @@
   <!-- End Single Page Apps for GitHub Pages -->
 </head>
 <body>
-  <canvas id="bg"></canvas>
+  <svg id="stars">
+    <defs>
+      <linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="rgba(0,0,0,1)"/>
+        <stop offset="100%" stop-color="#232037"/>
+      </linearGradient>
+    </defs>
+    <rect id="space" x="0" y="0" fill="url(#grad)"/>
+    <g class="sheet" data-count="40" data-radius="2" data-fill="rgba(243,243,243,0.33)" data-length="10" />
+    <g class="sheet" data-count="20" data-radius="3" data-fill="rgba(243,243,243,0.66)" data-length="20" />
+    <g class="sheet" data-count="10" data-radius="4.5" data-fill="rgba(243,243,243,1)" data-length="40" />
+  </svg>
 
   <main class="relative text-center">
     <div class="email">
