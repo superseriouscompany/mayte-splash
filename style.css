@@ -402,13 +402,13 @@ form.signup {
 
 @-webkit-keyframes star-sheet {
   to {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); } }
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px); } }
 
 @keyframes star-sheet {
   to {
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); } }
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px); } }
 
 body.done .cta {
   display: none; }
