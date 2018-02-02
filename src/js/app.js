@@ -1,1 +1,1 @@
-var $ = document.querySelector.bind(document)
+import './stars'

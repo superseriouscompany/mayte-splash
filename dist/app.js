@@ -9034,7 +9034,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 "use strict";
 
 
-var $ = document.querySelector.bind(document);
+__webpack_require__(332);
 
 /***/ }),
 /* 329 */,
@@ -9042,6 +9042,84 @@ var $ = document.querySelector.bind(document);
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 331 */,
+/* 332 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var stars = document.getElementById('stars');
+
+var space = stars.getElementById('space');
+space.setAttribute('width', window.innerWidth);
+space.setAttribute('height', window.innerHeight);
+
+var mayteWhite = function mayteWhite(a) {
+  return 'rgba(243,243,243,' + (!a ? a === 0 ? 0 : 1 : a) + ')';
+};
+var starRadius = 5;
+
+var StarSheet = function () {
+  function StarSheet(canvas) {
+    _classCallCheck(this, StarSheet);
+
+    this.canvas = canvas;
+    this.writeSheet(this.canvas);
+  }
+
+  _createClass(StarSheet, [{
+    key: 'writeSheet',
+    value: function writeSheet(s) {
+      var count = parseInt(s.getAttribute('data-count'));
+      var radius = parseInt(s.getAttribute('data-radius'));
+      var fill = s.getAttribute('data-fill');
+      var length = parseInt(s.getAttribute('data-length'));
+
+      var sizer = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      sizer.setAttribute('x', 0);
+      sizer.setAttribute('y', 0);
+      sizer.setAttribute('width', window.innerWidth);
+      sizer.setAttribute('height', window.innerHeight * 2);
+      sizer.setAttribute('fill', 'rgba(0,0,0,0)');
+      s.appendChild(sizer);
+
+      for (var i = 0; i < count; i++) {
+        var cx = Math.random() * (window.innerWidth - radius) + radius;
+        var cy = Math.random() * (window.innerHeight - radius) + radius;
+
+        var star = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        star.setAttribute('cx', cx);
+        star.setAttribute('cy', cy);
+        star.setAttribute('r', radius);
+        star.setAttribute('fill', fill);
+        s.appendChild(star);
+
+        var dup = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        dup.setAttribute('cx', cx);
+        dup.setAttribute('cy', window.innerHeight + cy);
+        dup.setAttribute('r', radius);
+        dup.setAttribute('fill', fill);
+        s.appendChild(dup);
+      }
+
+      s.style.animation = 'star-sheet ' + length + 's linear infinite';
+    }
+  }]);
+
+  return StarSheet;
+}();
+
+var sheets = Array.from(stars.getElementsByClassName('sheet'));
+sheets.forEach(function (s, i, a) {
+  return new StarSheet(s);
+});
 
 /***/ })
 /******/ ]);

@@ -393,13 +393,22 @@ form.signup {
     form.signup .error {
       top: calc(100% - 60px); } }
 
-#bg {
-  background: pink;
+#stars {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0; }
+
+@-webkit-keyframes star-sheet {
+  to {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); } }
+
+@keyframes star-sheet {
+  to {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); } }
 
 body.done .cta {
   display: none; }
