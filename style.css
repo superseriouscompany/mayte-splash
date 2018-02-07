@@ -147,6 +147,14 @@ body {
 a {
   color: #f3f3f3; }
 
+a.logo {
+  position: absolute;
+  top: 1em;
+  left: 1em; }
+  a.logo img {
+    max-width: 80px;
+    height: auto; }
+
 p, h1, h2, h3, h4, h5 {
   margin: 0;
   font-weight: 300; }
@@ -266,9 +274,10 @@ footer {
   footer .copyright {
     color: #f3f3f3; }
   footer .terms a {
-    color: #f3f3f3; }
-    footer .terms a:first-of-type {
-      margin-right: 0.5em; }
+    color: #f3f3f3;
+    margin-right: 0.5em; }
+    footer .terms a:last-of-type {
+      margin-right: 0; }
 
 @media screen and (max-width: 800px) {
   footer {
@@ -310,12 +319,55 @@ footer {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px); } }
 
-body.done .cta {
-  display: none; }
+.content.community {
+  display: block;
+  padding: 6em 5%; }
+  .content.community .title {
+    margin-bottom: 1em;
+    font-weight: 700;
+    font-size: 2.33em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; }
+  .content.community .body {
+    font-size: 1.33em;
+    line-height: 1.5em;
+    max-width: 800px;
+    margin: 0 auto 4em;
+    font-family: 'EB Garamond', serif; }
+  .content.community ul.body {
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none; }
+    .content.community ul.body li {
+      margin-bottom: 2.5em;
+      font-size: 0.8em; }
+      .content.community ul.body li:first-of-type {
+        margin-top: 2em; }
+      .content.community ul.body li .cat {
+        text-transform: uppercase;
+        font-size: 1.33em;
+        display: block;
+        margin-bottom: 0.33em;
+        font-family: 'Futura'; }
+  .content.community a.logos {
+    display: inline-block;
+    font-size: 1.33em;
+    margin: 2em auto 0; }
+    .content.community a.logos .icon {
+      width: 100%;
+      height: auto; }
+    .content.community a.logos .type {
+      width: 100%;
+      height: auto; }
 
-.footer-link {
-  color: silver;
-  text-decoration: underline; }
+@media screen and (max-width: 600px) {
+  .content.community {
+    font-size: 0.9em;
+    padding: 5em 5%; }
+    .content.community .title {
+      font-size: 6vw; }
+    .content.community .logos {
+      margin: 1em auto 0; } }
 
 @-webkit-keyframes fade-in {
   0% {
