@@ -9034,18 +9034,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 "use strict";
 
 
-__webpack_require__(332);
+__webpack_require__(329);
 
 /***/ }),
-/* 329 */,
-/* 330 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 331 */,
-/* 332 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9116,6 +9108,12 @@ var sheets = Array.from(stars.getElementsByClassName('sheet'));
 sheets.forEach(function (s, i, a) {
   return new StarSheet(s);
 });
+
+/***/ }),
+/* 330 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

@@ -1,0 +1,72 @@
+.content.community {
+  display: block;
+  padding: 6em 5%;
+
+  .title {
+    margin-bottom: 1em;
+    font-weight: 700;
+    font-size: 2.33em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .body {
+    font-size: 1.33em;
+    line-height: 1.5em;
+    max-width: 800px;
+    margin: 0 auto 4em;
+    font-family: 'EB Garamond', serif;
+  }
+
+  ul.body {
+    padding: 0;
+    margin: 0 auto;
+    list-style-type: none;
+
+    li {
+      margin-bottom: 2.5em;
+      font-size: 0.8em;
+
+      &:first-of-type {
+        margin-top: 2em;
+      }
+
+      .cat {
+        text-transform: uppercase;
+        font-size: 1.33em;
+        display: block;
+        margin-bottom: 0.33em;
+        font-family: 'Futura';
+      }
+    }
+  }
+
+  a.logos {
+    display: inline-block;
+    font-size: 1.33em;
+    margin: 2em auto 0;
+    .icon {
+      width: 100%;
+      height: auto;
+    }
+    .type {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content.community {
+    font-size: 0.9em;
+    padding: 5em 5%;
+
+    .title {
+      font-size: 6vw;
+    }
+
+    .logos {
+      margin: 1em auto 0;
+    }
+  }
+}

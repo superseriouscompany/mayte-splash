@@ -26,6 +26,17 @@ a {
   color: $mayte-white;
 }
 
+a.logo {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+
+  img {
+    max-width: 80px;
+    height: auto;
+  }
+}
+
 p, h1, h2, h3, h4, h5 {
   margin: 0;
   font-weight: 300;
@@ -34,12 +45,7 @@ p, h1, h2, h3, h4, h5 {
 @import './main';
 @import './footer';
 @import './stars';
-
-body.done {
-  .cta { display: none; }
-}
-
-.footer-link { color: silver; text-decoration: underline  }
+@import './community';
 
 @keyframes fade-in {
   0% {
